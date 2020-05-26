@@ -1,0 +1,47 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Switch 001 is not working",
+      "attention": true,
+      "date": "2020-02-02",
+      "tech": "Sirimal"
+    },
+    {
+      "id": 2,
+      "message": "Router 002 is  working now",
+      "attention": false,
+      "date": "2020-05-02",
+      "tech": "Sirimal"
+    },
+    {
+      "id": 3,
+      "message": "CNC machine is not working",
+      "attention": true,
+      "date": "2020-07-02",
+      "tech": "Sirimal"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "FirstName": "Sirimal",
+      "LastName": "Sugathapala"
+    },
+    {
+      "id": 2,
+      "FirstName": "Warnapala",
+      "LastName": "Rajapaksha"
+    },
+    {
+      "id": 3,
+      "FirstName": "Kalum",
+      "LastName": "Sandaruwan"
+    },
+    {
+      "FirstName": "Janaka",
+      "LastName": "Withana",
+      "id": 4
+    }
+  ]
+}
