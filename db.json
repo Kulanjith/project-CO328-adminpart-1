@@ -1,11 +1,32 @@
 {
   "logs": [
     {
-      "message": "Solved the problem in Switch",
+      "id": 2,
+      "message": " problem in the main server 005 issue fixxed",
+      "attention": false,
+      "tech": "Sam Smith",
+      "date": "2020-05-30T11:11:33.479Z"
+    },
+    {
+      "id": 3,
+      "message": "problem in the 009 router",
       "attention": false,
       "tech": "Sara Williams",
-      "date": "2020-05-29T22:00:15.844Z",
-      "id": 1
+      "date": "2020-05-30T10:24:25.844Z"
+    },
+    {
+      "id": 4,
+      "message": "cnc machine bug ",
+      "attention": true,
+      "tech": "Sara Williams",
+      "date": "2020-05-30T11:49:54.288Z"
+    },
+    {
+      "message": "no enough jumper wires",
+      "attention": true,
+      "tech": "Sara Williams",
+      "date": "2020-05-30T11:12:21.058Z",
+      "id": 5
     }
   ],
   "techs": [
