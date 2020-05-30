@@ -1,23 +1,34 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addTech } from "../../actions/techActions";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-function AddTechModal() {
+const AddTechModal = ({ addTech }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
-  const onsubmit = () => {
+  const onSubmit = () => {
     if (firstName === "" || lastName === "") {
-      M.toast({ html: "Please enter the first and last Names" });
+      M.toast({ html: "Please enter the first and last name" });
     } else {
-      console.log(firstName, lastName);
+      addTech({
+        firstName,
+        lastName,
+      });
+
+      M.toast({ html: `${firstName} ${lastName} was added as a tech` });
+
+      // Clear Fields
       setFirstName("");
       setLastName("");
     }
   };
+
   return (
     <div id="add-tech-modal" className="modal">
       <div className="modal-content">
-        <h4> New Technician </h4>
+        <h4>New Technician</h4>
         <div className="row">
           <div className="input-field">
             <input
@@ -26,7 +37,6 @@ function AddTechModal() {
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
-
             <label htmlFor="firstName" className="active">
               First Name
             </label>
@@ -41,25 +51,27 @@ function AddTechModal() {
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
-
-            <label htmlFor="firstName" className="active">
+            <label htmlFor="lastName" className="active">
               Last Name
             </label>
           </div>
         </div>
-
-        <div className="modal-footer">
-          <a
-            href="#!"
-            onClick={onsubmit}
-            className="modal-close wavws-effect waves-light btn"
-          >
-            Enter
-          </a>
-        </div>
+      </div>
+      <div className="modal-footer">
+        <a
+          href="#!"
+          onClick={onSubmit}
+          className="modal-close waves-effect blue waves-light btn"
+        >
+          Enter
+        </a>
       </div>
     </div>
   );
-}
+};
 
-export default AddTechModal;
+AddTechModal.propTypes = {
+  addTech: PropTypes.func.isRequired,
+};
+
+export default connect(null, { addTech })(AddTechModal);
